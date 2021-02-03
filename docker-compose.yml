@@ -1,21 +1,14 @@
 version: '3'
 services:
   db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
-
   client:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.client
       context: ./
     volumes:
       - ./:/app
