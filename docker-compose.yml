@@ -1,6 +1,7 @@
 version: '3'
 services:
   db:
+    container_name: db
     image: mysql:5.7
     restart: always
     environment:
@@ -8,11 +9,14 @@ services:
     ports:
       - '3306:3306'
   client:
+    container_name: client
     build:
       dockerfile: Dockerfile.client
       context: .
     volumes:
       - ./:/app
+    command: [php bin/console doctrine:database:create, 
+              php bin/console doctrine:schema:create]
     ports:
       - '8000:8000'
     depends_on:

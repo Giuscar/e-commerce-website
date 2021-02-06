@@ -1,7 +1,17 @@
 # E-commerce website
 Scope of this project is the development of an e-commerce application using Symfony, Twig and Bootstrap.
 
+# Requirements:
+- Docker v.19.03.18
+
 # How to launch the application
-- The only requirement is Docker.
-- Launch the command docker-compose up --build to generate the containers. 
-- Connect to the following link http://localhost:8080. 
+Execute the following commands:
+- docker-compose up --build
+- CTRL-C
+- docker-compose up -d
+- Connect to client docker container in order to set up the DB environment:
+  a- docker exec -ti client
+  b- php bin/console doctrine:database:create
+  c- php bin/console doctrine:schema:create
+
+That's it. You can now connect to the following link http://localhost:8080. 
