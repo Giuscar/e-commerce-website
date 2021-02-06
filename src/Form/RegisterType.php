@@ -40,9 +40,18 @@ class RegisterType extends AbstractType
                 'type' => PasswordType::class,
                 'invalid_message' => 'The password is not the same',
                 'label' => 'Your password',
+
                 'required' => true,
-                'first_options' => ['label' => 'Insert your password'],
-                'second_options' => ['label' => 'Confirm your password']
+                'first_options' => ['label' => 'Insert your password',
+                    'attr' => [
+                        'placeholder' => 'Please insert your password'
+                    ]
+                ],
+                'second_options' => ['label' => 'Confirm your password',
+                    'attr' => [
+                        'placeholder' => 'Please confirm your password'
+                    ]
+                ]
             ])
             ->add('submit', SubmitType::class);
         ;
