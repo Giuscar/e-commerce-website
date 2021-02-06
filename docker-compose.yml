@@ -5,15 +5,15 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
-
+    ports:
+      - '3306:3306'
   client:
     build:
       dockerfile: Dockerfile.client
-      context: ./
+      context: .
     volumes:
       - ./:/app
     ports:
       - '8000:8000'
     depends_on:
       - db
-

@@ -137,6 +137,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -152,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612112521951</updated>
       <workItem from="1612112523678" duration="3723000" />
-      <workItem from="1612293677237" duration="2404000" />
+      <workItem from="1612293677237" duration="12103000" />
     </task>
     <servers />
   </component>
