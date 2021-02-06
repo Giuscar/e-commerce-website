@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegisterController extends AbstractController
 {
@@ -22,7 +23,7 @@ class RegisterController extends AbstractController
     /**
      * @Route("/register", name="register")
      */
-    public function index(Request $request): Response
+    public function index(Request $request, UserPasswordEncoderInterface $encoder): Response
     {
         $user = new User();
         $form = $this->createForm(RegisterType::class);
@@ -32,6 +33,10 @@ class RegisterController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             //Storing information in User entity
             $user = $form->getData();
+
+            //Encoding password
+            $password = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($password);
 
             //Storing registered user in the DB.
             $this->entityManager->persist($user);
