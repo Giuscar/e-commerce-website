@@ -15,8 +15,6 @@ services:
       context: .
     volumes:
       - ./:/app
-    command: [php bin/console doctrine:database:create, 
-              php bin/console doctrine:schema:create]
     ports:
       - '8000:8000'
     depends_on:
