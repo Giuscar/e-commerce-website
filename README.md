@@ -10,8 +10,8 @@ Execute the following commands:
 - CTRL-C
 - docker-compose up -d
 - Connect to client docker container in order to set up the DB environment:
-  a- docker exec -ti client
-  b- php bin/console doctrine:database:create
-  c- php bin/console doctrine:schema:create
+  - docker exec -ti client
+  - php bin/console doctrine:database:create
+  - php bin/console doctrine:schema:create
 
 That's it. You can now connect to the following link http://localhost:8080. 
