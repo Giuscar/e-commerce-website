@@ -1,4 +1,4 @@
-.navbar-item-custom a{
+.navbar-item-custom a {
     color: #fff;
 }
 
@@ -9,4 +9,26 @@
     width: 100%;
     background-color: #dfeaff;
     padding-top: 25px;
+}
+
+.product-item {
+    margin-top: 50px;
+}
+
+.product-item h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+.product-item .product-subtitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-item .product-price {
+    font-size: 15px;
+}
+
+.product-container {
+    margin-bottom: 125px;
 }

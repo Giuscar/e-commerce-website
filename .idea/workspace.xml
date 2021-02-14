@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15d05c88-fb6f-4baa-9979-29e7ae6412ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76bb0f0f-e0de-4b0d-9db4-8f3331061399.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/76bb0f0f-e0de-4b0d-9db4-8f3331061399.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/e-commerce.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/e-commerce.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +158,7 @@
       <updated>1612112521951</updated>
       <workItem from="1612112523678" duration="3723000" />
       <workItem from="1612293677237" duration="32098000" />
+      <workItem from="1613239697183" duration="13258000" />
     </task>
     <servers />
   </component>
