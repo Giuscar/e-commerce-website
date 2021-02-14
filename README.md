@@ -10,7 +10,7 @@ Execute the following commands:
 - CTRL-C
 - docker-compose up -d
 - Connect to client docker container in order to set up the DB environment:
-  - docker exec -ti client
+  - docker exec -ti client bash
   - php bin/console doctrine:database:create
   - php bin/console doctrine:schema:create
 
