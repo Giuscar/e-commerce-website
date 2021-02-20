@@ -10,7 +10,8 @@ services:
     command: [mysqld, --init-file=/mysql_init.sql]
     environment:
       MYSQL_ROOT_PASSWORD: example
-  
+    ports:
+      - '3306:3306' 
   client:
     container_name: client
     build:
