@@ -4,10 +4,13 @@ services:
     container_name: db
     image: mysql:5.7
     restart: always
+    volumes:
+      - ./mysql_init.sql:/mysql_init.sql
+      - ecommerce-database:/var/lib/mysql
+    command: [mysqld, --init-file=/mysql_init.sql]
     environment:
       MYSQL_ROOT_PASSWORD: example
-    ports:
-      - '3306:3306'
+  
   client:
     container_name: client
     build:
@@ -15,7 +18,10 @@ services:
       context: .
     volumes:
       - ./:/app
+      - /app/vendor
     ports:
       - '8000:8000'
     depends_on:
       - db
+volumes:
+  ecommerce-database:
