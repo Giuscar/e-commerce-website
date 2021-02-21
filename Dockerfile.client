@@ -7,8 +7,7 @@ RUN apt-get install -y \
         libzip-dev \
         zip \
   && docker-php-ext-install zip
-COPY . /app
 WORKDIR /app
+COPY . /app
 RUN composer install
 ENTRYPOINT php bin/console server:run 0.0.0.0:8000
-CMD php bin/console doctrine:schema:update
